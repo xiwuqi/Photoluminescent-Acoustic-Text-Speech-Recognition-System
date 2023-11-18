@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SpeechRecognition">
+
+
+
+
+    <ScrollView
+        android:id="@+id/scrollViewSr"
+        android:layout_width="399dp"
+        android:layout_height="550dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="1dp"
+        android:background="@drawable/edittext_rounded_bg"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <EditText
+            android:id="@+id/etOutputSr"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="识别结果在此处显示\n使用须知：\n1.先将自己需要转换的文件上传到https://up.ly93.cc/中，获取直链地址\n2.点击选择按钮后输入相应的直链地址即可开始进行转换（转换需要时间，请耐心等待）\n3.显示转换任务正在进行中...后可以点击右上角的刷新按钮试试"
+            android:gravity="top"
+            android:padding="8dp"
+            android:textSize="16sp" />
+    </ScrollView>
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="408dp"
+        android:layout_height="80dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            tools:layout_editor_absoluteX="-3dp"
+            tools:layout_editor_absoluteY="632dp">
+
+            <ImageButton
+                android:id="@+id/btnSelectSr"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="#00000000"
+                android:scaleType="centerInside"
+                app:srcCompat="@drawable/select" />
+
+            <ImageButton
+                android:id="@+id/btnClearSr"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="#00000000"
+                android:scaleType="centerInside"
+                app:srcCompat="@drawable/clear" />
+
+            <ImageButton
+                android:id="@+id/btnRecordSr"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="#00000000"
+                android:scaleType="centerInside"
+                app:srcCompat="@drawable/record" />
+
+            <ImageButton
+                android:id="@+id/btnCopySr"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="#00000000"
+                android:scaleType="centerInside"
+                app:srcCompat="@drawable/copy" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="选择"
+                android:textAlignment="center"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="清空"
+                android:textAlignment="center" />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="录音"
+                android:textAlignment="center" />
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="复制"
+                android:textAlignment="center" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

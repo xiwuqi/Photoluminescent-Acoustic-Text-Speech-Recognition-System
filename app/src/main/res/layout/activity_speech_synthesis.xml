@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SpeechSynthesis">
+
+    <ScrollView
+        android:id="@+id/scrollViewSs"
+        android:layout_width="399dp"
+        android:layout_height="550dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="1dp"
+        android:background="@drawable/edittext_rounded_bg"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <EditText
+            android:id="@+id/etOutputSs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="文本输入处\n使用须知:\n1.由于免费接口限制，本产品只支持短文本语音在线合成，具体限制为：使用UTF-8编码。不超过60个汉字或者字母数字\n2.可以点击选择按钮选择相应的文本文件，文本文件被读取后只会保留从文本开始计数起不超过60个字符的文本信息，超出部分会被截取\n3.选择完毕后点击开始，并选择要合成的人声即可开始播放合成的人声结果，生成的音频文件会被保留在系统的Music文件夹下\n4.如需取消播放，点击取消按钮即可"
+            android:padding="8dp"
+            android:gravity="top"
+        android:textSize="16sp" />
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="408dp"
+        android:layout_height="80dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            tools:layout_editor_absoluteX="-3dp"
+            tools:layout_editor_absoluteY="632dp">
+
+            <ImageButton
+                android:id="@+id/btnSelectSs"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="#00000000"
+                android:scaleType="centerInside"
+                app:srcCompat="@drawable/select" />
+
+            <ImageButton
+                android:id="@+id/btnClearSs"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="#00000000"
+                android:scaleType="centerInside"
+                app:srcCompat="@drawable/clear" />
+
+            <ImageButton
+                android:id="@+id/btnBeginSs"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="#00000000"
+                android:scaleType="centerInside"
+                app:srcCompat="@drawable/play" />
+
+            <ImageButton
+                android:id="@+id/btnCancelSs"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="#00000000"
+                android:scaleType="centerInside"
+                app:srcCompat="@drawable/cancel" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="选择"
+                android:textAlignment="center"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="清空"
+                android:textAlignment="center" />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="开始"
+                android:textAlignment="center" />
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="取消"
+                android:textAlignment="center" />
+        </LinearLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
